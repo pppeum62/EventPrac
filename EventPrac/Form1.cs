@@ -24,8 +24,14 @@ namespace EventPrac
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Button btn = (Button)sender;
+            btn.Text = "으악!";
+            btn.Enabled = false;
+
+            /*
             textBox1.Text += "▷";
             label1.Text = label1.Text + "▷";
+            */
         }
     }
 }
