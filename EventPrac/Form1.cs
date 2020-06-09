@@ -33,5 +33,15 @@ namespace EventPrac
             label1.Text = label1.Text + "▷";
             */
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            label1.Text = "X : " + e.X + " / Y : " + e.Y;
+        }
     }
 }
