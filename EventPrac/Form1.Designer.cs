@@ -36,6 +36,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.start_btn = new System.Windows.Forms.Button();
+            this.stop_btn = new System.Windows.Forms.Button();
+            this.reset_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -95,11 +99,59 @@
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("나눔고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(12, 147);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(267, 29);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "시작 버튼을 눌러보세요";
+            // 
+            // start_btn
+            // 
+            this.start_btn.Location = new System.Drawing.Point(12, 194);
+            this.start_btn.Name = "start_btn";
+            this.start_btn.Size = new System.Drawing.Size(85, 35);
+            this.start_btn.TabIndex = 7;
+            this.start_btn.Text = "시작";
+            this.start_btn.UseVisualStyleBackColor = true;
+            this.start_btn.Click += new System.EventHandler(this.start_Click);
+            // 
+            // stop_btn
+            // 
+            this.stop_btn.Location = new System.Drawing.Point(111, 194);
+            this.stop_btn.Name = "stop_btn";
+            this.stop_btn.Size = new System.Drawing.Size(85, 35);
+            this.stop_btn.TabIndex = 8;
+            this.stop_btn.Text = "멈춤";
+            this.stop_btn.UseVisualStyleBackColor = true;
+            this.stop_btn.Click += new System.EventHandler(this.stop_Click);
+            // 
+            // reset_btn
+            // 
+            this.reset_btn.Location = new System.Drawing.Point(208, 194);
+            this.reset_btn.Name = "reset_btn";
+            this.reset_btn.Size = new System.Drawing.Size(85, 35);
+            this.reset_btn.TabIndex = 9;
+            this.reset_btn.Text = "리셋";
+            this.reset_btn.UseVisualStyleBackColor = true;
+            this.reset_btn.Click += new System.EventHandler(this.reset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(321, 450);
+            this.ClientSize = new System.Drawing.Size(304, 450);
+            this.Controls.Add(this.reset_btn);
+            this.Controls.Add(this.stop_btn);
+            this.Controls.Add(this.start_btn);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -124,6 +176,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button start_btn;
+        private System.Windows.Forms.Button stop_btn;
+        private System.Windows.Forms.Button reset_btn;
     }
 }
 

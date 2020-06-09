@@ -43,5 +43,32 @@ namespace EventPrac
         {
             label1.Text = "X : " + e.X + " / Y : " + e.Y;
         }
+
+        private int elapsedTime = 0;
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            elapsedTime++;
+
+            label2.Text = "" + elapsedTime;
+        }
+
+        private void start_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+            timer1.Start();
+        }
+
+        private void stop_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+        }
+
+        private void reset_Click(object sender, EventArgs e)
+        {
+            elapsedTime = 0;
+            label2.Text = "";
+        }
+
     }
 }
